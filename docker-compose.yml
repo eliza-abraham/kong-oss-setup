@@ -96,52 +96,12 @@ services:
       DB_USER: kong
       DB_PASSWORD: kongpass
       DB_DATABASE: konga_db
-      # DB_IS_PG12_OR_NEWER: true
       TOKEN_SECRET: km1GUr4RkcQD7DewhJPNXrCuZwcKmqjb
       NODE_ENV: production
     depends_on:
       - konga-database
     ports:
       - "1337:1337"
-
-
-  #######################################
-  # Konga: Future Version
-  # With support for postgres 12+
-  # Can use same DB as kong database
-  #######################################
-
-
-  # konga-prepare:
-  #   image: pantsel/konga:next
-  #   environment:
-  #     # DB_IS_PG12_OR_NEWER: true
-  #   command: "-c prepare -a postgres -u postgresql://kong:kongpass@kong-database:5432/konga_db"
-  #   networks:
-  #     - kong-net
-  #   links:
-  #     - kong-database
-  #   depends_on:
-  #     - kong-database
-
-  # konga:
-  #   image: pantsel/konga:next
-  #   restart: always
-  #   networks:
-  #       - kong-net
-  #   environment:
-  #     DB_ADAPTER: postgres
-  #     DB_HOST: konga-database
-  #     DB_USER: kong
-  #     DB_PASSWORD: kongpass
-  #     DB_DATABASE: konga_db
-  #     # DB_IS_PG12_OR_NEWER: true
-  #     TOKEN_SECRET: km1GUr4RkcQD7DewhJPNXrCuZwcKmqjb
-  #     NODE_ENV: production
-  #   depends_on:
-  #     - kong-database
-  #   ports:
-  #     - "1337:1337"
 
 networks:
   kong-net:
