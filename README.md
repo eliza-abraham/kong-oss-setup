@@ -20,9 +20,9 @@ $ docker-compose up -d kong-migration
 $ docker-compose up -d kong
 ```
 
-- Installs Kong 2.8.0 (open source)
+- Installs Kong 2.8.1 (open source)
 - Installs luarocks5.1
-- Installs [kong-oidc](https://github.com/nokia/kong-oidc) luarocks plugin
+- Installs [kong-oidc][1.2.4-4](https://github.com/revomatico/kong-oidc)
 
 See [Dockerfile](Dockerfile) for more details
 

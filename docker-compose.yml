@@ -23,7 +23,7 @@ services:
       KONG_PASSWORD: test
       KONG_PG_HOST: kong-database
       KONG_PG_PASSWORD: kongpass
-    image: kong/kong:2.8.0
+    image: kong/kong:2.8.1
     networks:
       - kong-net
 
