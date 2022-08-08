@@ -1,0 +1,5 @@
+FROM postgres:12
+
+ENV POSTGRES_DB="kong"
+ENV POSTGRES_USER="kong"
+ENV POSTGRES_PASSWORD="kongpass"

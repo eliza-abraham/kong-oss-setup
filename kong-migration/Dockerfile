@@ -1,0 +1,8 @@
+FROM kong/kong:2.8.1
+
+ENV KONG_DATABASE="postgres"
+ENV KONG_PASSWORD="test"
+ENV KONG_PG_USER="wobkcwlmzjxgvb"
+ENV KONG_PG_HOST="ec2-23-23-81-31.compute-1.amazonaws.com"
+ENV KONG_PG_PASSWORD="80d9a238b2501783ebffabb5a09d3151c00a1b2b87c992b28ad694e91bc6e69e"
+ENV KONG_PG_DATABASE="dferr19vt82cd2"

@@ -1,0 +1,16 @@
+build:
+  docker:
+    # kong-database: ./kong-database/Dockerfile
+    #kong-migration: ./kong-migration/Dockerfile
+    web: ./kong-gateway/Dockerfile
+# release:
+#   image: kong-migration
+#   command:
+#     - kong migrations bootstrap
+
+# release:
+#   command:
+#     - kong start
+#   image: web
+run:
+  web: kong start
